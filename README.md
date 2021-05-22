@@ -16,3 +16,10 @@
   to use the timer to hopefully push things along and bring focus. 
   
   ** Fri 21 - Entry 2 **
+
+- PSEUDO CODE: We finished off the pseudo-code for Screens 1-5. Git pushed and co-authored. We tried to start by one person leading the pseudo code and then poeople   jumping on the contribution. This took us the most time, as when we reached a parituclar feature, we were still questioning the design. We were agile with the       design and allowed ourselves to be felxible and realistic with our knowledged of code and ability to complete certain features by removing them. We removed the     timer, we removed score intended to be displayed during the game. 
+- HARDCODING HTML: We laid the foundations of the HTML up to screen 4. 
+- HARDCODING CSS: We did 2 lines for CSS colour selection 
+- PLANNING: We discussed how we were going to tackle tomorrow's pair coding challenges and what screens or features were needed first before continuing, where the     crossover in code would happen so we could avoid repetion, and also what a democratic way of coding was so people could get expereince of handling APIS and         buttons and links. 
+
+** Sat 22 - Entry 3 **
