@@ -72,7 +72,8 @@ img {
 #home-logo {
   width: 300px;
 }
-.start-button,.confirm-button {
+.start-button,
+.confirm-button {
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -105,7 +106,6 @@ img {
   justify-content: space-around;
   height: 500px;
   background-color: var(--app-yellow);
-
 }
 
 /* .header-container {
@@ -118,7 +118,24 @@ img {
 
 input {
   width: 200px;
+  padding: 10px;
   background-color: white;
   margin: 20px;
+  border-radius: 10px;
 }
 
+/* .character-container {
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: flex end;
+} */
+.character-container {
+  /* justify-content: space-evenly; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-container > label {
+  flex-grow: 1;
+  width: 33%;
+}
