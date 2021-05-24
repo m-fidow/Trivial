@@ -5,3 +5,13 @@ Blue: #152F75
 Score Blue: #142AF1
 
 */
+
+/* General Style*/
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Quicksand', sans-serif;
+    background-color: #ffc128; 
+}
