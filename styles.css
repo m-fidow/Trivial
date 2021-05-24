@@ -7,6 +7,13 @@ Score Blue: #142AF1
 */
 
 /* General Style*/
+:root {
+    --app-pink: #ff006c;
+    --app-light-blue: #142AF1;
+    --app-dark-blue:#152F75;
+}
+
+
 
 * {
     margin: 0;
@@ -15,3 +22,4 @@ Score Blue: #142AF1
     font-family:'Quicksand', sans-serif;
     background-color: #ffc128; 
 }
+
