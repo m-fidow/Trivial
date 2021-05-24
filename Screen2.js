@@ -38,7 +38,6 @@ async function fetchQuestion() {
     "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
   );
   let data = await response.json();
-  console.log(data);
 }
 fetchQuestion();
 
@@ -54,7 +53,6 @@ function getAvatar() {
   for (i = 0; i < av.length; i++) {
     if (av[i].checked) {
       avatarImage = av[i].value;
-      console.log(avatarImage);
     }
   }
 }
@@ -65,5 +63,3 @@ function confirm() {
   console.log(userName);
   getAvatar();
 }
-
-//Writing a Function for Feature 2: Character Selection Icons
