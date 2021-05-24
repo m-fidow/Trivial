@@ -17,14 +17,14 @@
       </section>
 
       <!-- Screen 2-->
-      <section id="screen2">
-        <div class="in-game-logo">
-          <img src="/Tivial-Assets/Logo-Trivial/00LogoMerged.svg" alt="Logo" />
-        </div>
-        <div class="header-container">
-          <h2 class = "name-header">What's your name?</h2>
-          <input type="text" name="" id="" />
-        </div>
+        <section id="screen2">
+          <h2>What's your name?</h2>
+          <form class="input">
+            <input
+              type="text"
+              pattern="[A-Za-z]{1,10}"
+              id="name-input"
+              title="Username must not be than 10 letters." />
         <div class="character-selection">
           <h2>Select character</h2>
           <div class="character-container">
@@ -34,9 +34,9 @@
                 type="radio"
                 id="A"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=A"
+                value="/Tivial-Assets\Av01Red.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=A" />
+              <img src="/Tivial-Assets\Av01Red.svg" />
             </label>
 
             <label>
@@ -45,9 +45,9 @@
                 type="radio"
                 id="B"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=B"
+                value="/Tivial-Assets\Av02Orange.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=B" />
+              <img src="/Tivial-Assets\Av02Orange.svg" />
             </label>
 
             <label>
@@ -56,9 +56,9 @@
                 type="radio"
                 id="C"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=C"
+                value="/Tivial-Assets\Av03Yellow.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=C" />
+              <img src="/Tivial-Assets\Av03Yellow.svg" />
             </label>
             <label>
               <input
@@ -66,9 +66,9 @@
                 type="radio"
                 id="D"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=D"
+                value="/Tivial-Assets\Av04Green.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=D" />
+              <img src="/Tivial-Assets\Av04Green.svg" />
             </label>
 
             <label>
@@ -77,9 +77,9 @@
                 type="radio"
                 id="E"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=E"
+                value="/Tivial-Assets\Av05Blue.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=E" />
+              <img src="/Tivial-Assets\Av05Blue.svg" />
             </label>
 
             <label>
@@ -88,9 +88,9 @@
                 type="radio"
                 id="F"
                 name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=F"
+                value="/Tivial-Assets\Av06Violet.svg"
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=F" />
+              <img src="/Tivial-Assets\Av06Violet.svg" />
             </label>
           </div>
           <button type="button" class="confirm-button">CONFIRM</button>
