@@ -35,6 +35,7 @@ Score Blue: #142AF1
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
+  color: var(--app-dark-blue);
   background-color: var(--app-yellow);
 }
 /* #hide {
@@ -71,7 +72,7 @@ img {
 #home-logo {
   width: 300px;
 }
-.start-button {
+.start-button,.confirm-button {
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -84,5 +85,40 @@ img {
 }
 
 .in-game-logo {
-  width: 100px;
+  width: 150px;
+  justify-content: center;
 }
+
+#screen2 {
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  background-color: var(--app-yellow);
+
+}
+
+/* .header-container {
+  
+} */
+
+.name-header {
+  padding-top: 20px;
+}
+
+input {
+  width: 200px;
+  background-color: white;
+  margin: 20px;
+}
+
