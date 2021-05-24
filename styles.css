@@ -4,10 +4,23 @@ Button/Selection Pink: #ff006c
 Blue: #152F75
 Score Blue: #142AF1
 
-*/
 
-/* image styles */
+/* General Style*/
+:root {
+  --app-yellow: #ffc128;
+  --app-pink: #ff006c;
+  --app-light-blue: #142af1;
+  --app-dark-blue: #152f75;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  color: var(--app-dark-blue);
+  background-color: var(--app-yellow);
+}
 /* #hide {
   display: none;
 } */
@@ -117,19 +130,44 @@ input {
   height: 0;
 }
 
-/* General Style*/
-:root {
-  --app-yellow: #ffc128;
-  --app-pink: #ff006c;
-  --app-light-blue: #142af1;
-  --app-dark-blue: #152f75;
+.character-container > label:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-  color: var(--app-dark-blue);
-  background-color: var(--app-yellow);
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
