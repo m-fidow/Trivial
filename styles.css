@@ -8,6 +8,7 @@ Score Blue: #142AF1
 
 /* General Style*/
 :root {
+  --app-yellow: #ffc128;
   --app-pink: #ff006c;
   --app-light-blue: #142af1;
   --app-dark-blue: #152f75;
@@ -18,8 +19,11 @@ Score Blue: #142AF1
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
-  background-color: #ffc128;
+  background-color: var(--app-yellow);
 }
+/* #hide {
+  display: none;
+} */
 /* 
 main {
     position:
@@ -34,18 +38,31 @@ main {
   right: 0px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  height: 500px;
+  background-color: var(--app-yellow);
 }
 img {
   max-width: 100%;
   max-height: 100%;
+  padding: 20px;
 }
-
 #home-logo {
   width: 300px;
+}
+.start-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: var(--app-pink);
+  color: white;
+  /*! font-weight: bold; */
+  letter-spacing: 3px;
+  font-size: 1.5rem;
 }
