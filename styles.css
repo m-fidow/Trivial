@@ -8,17 +8,17 @@ Score Blue: #142AF1
 
 /* General Style*/
 :root {
-    --app-pink: #ff006c;
-    --app-light-blue: #142AF1;
-    --app-dark-blue:#152F75;
+  --app-pink: #ff006c;
+  --app-light-blue: #142af1;
+  --app-dark-blue: #152f75;
 }
 
 * {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'Quicksand', sans-serif;
-    background-color: #ffc128; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  background-color: #ffc128;
 }
 /* 
 main {
@@ -27,15 +27,24 @@ main {
 } */
 
 #screen1 {
-    background-color: #fff;
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    right: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: center;
+  background-color: #fff;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-
+#home-logo {
+  width: 300px;
+}
