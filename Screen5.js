@@ -52,6 +52,7 @@ fetchGif();
 //   document.querySelector(".tester").style.display = "none";
 // }
 // document.querySelector(".hide-button");
-const avatarSelection = document.querySelector();
+const avatarSelection = document.querySelector(".user-avatar");
+const usernameText = document.querySelector(".username-text");
 
 function getAvatarAndUsername() {}
