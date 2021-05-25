@@ -64,17 +64,20 @@ img {
 #home-logo {
   width: 300px;
 }
-.start-button,
-.confirm-button {
+.screen-button {
   width: 200px;
   height: 50px;
-  border-radius: 10px;
-  border: none;
-  background: var(--app-pink);
   color: white;
-  /*! font-weight: bold; */
   letter-spacing: 3px;
   font-size: 1.5rem;
+  border: none;
+}
+.start-button {
+  border-radius: 10px;
+  background: var(--app-pink);
+}
+.confirm-button {
+  background: var(--app-dark-blue);
 }
 
 .in-game-logo {
