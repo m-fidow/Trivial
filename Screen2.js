@@ -31,14 +31,13 @@
 //added variables for difficulty and cathegory
 let difficultySelection = "easy";
 let categorySelection = "1";
-
+let screen3 = document.querySelector("#screen3");
 const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 async function fetchQuestion() {
   let response = await fetch(
     "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
   );
   let data = await response.json();
-  console.log(data);
 }
 fetchQuestion();
 
@@ -54,7 +53,6 @@ function getAvatar() {
   for (i = 0; i < av.length; i++) {
     if (av[i].checked) {
       avatarImage = av[i].value;
-      console.log(avatarImage);
     }
   }
 }
@@ -64,6 +62,6 @@ function confirm() {
   userName = input.charAt(0).toUpperCase() + input.slice(1);
   console.log(userName);
   getAvatar();
+  screen2.classList.add("hide");
+  screen3.classList.remove("hide");
 }
-
-//Writing a Function for Feature 2: Character Selection Icons
