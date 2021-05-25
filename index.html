@@ -10,86 +10,47 @@
     <!-- Screen 1 -->
     <main>
       <section id="screen1">
-        <div id="home-logo">
-          <img src="/Tivial-Assets/Logo-Trivial/00LogoMerged.svg" alt="Logo" />
-        </div>
         <button class="start-button" src="#screen2">START</button>
       </section>
 
-      <!-- Screen 2-->
+      <!-- Screen 2 -->
       <section id="screen2">
-        <div class="in-game-logo">
-          <img src="/Tivial-Assets/Logo-Trivial/00LogoMerged.svg" alt="Logo" />
-        </div>
-        <div class="header-container">
-          <h2 class = "name-header">What's your name?</h2>
-          <input type="text" name="" id="" />
-        </div>
-        <div class="character-selection">
+        <h2>What's your name?</h2>
+        <form class="input">
+          <input
+            type="text"
+            pattern="[A-Za-z]{1,10}"
+            id="name-input"
+            title="Username must not be than 10 letters."
+          />
           <h2>Select character</h2>
           <div class="character-container">
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="A"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=A"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=A" />
             </label>
 
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="B"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=B"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=B" />
             </label>
 
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="C"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=C"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=C" />
             </label>
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="D"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=D"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=D" />
             </label>
 
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="E"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=E"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=E" />
             </label>
 
             <label>
-              <input
-                class="character-selection"
-                type="radio"
-                id="F"
-                name="avatar"
-                value="http://placehold.it/40x60/0bf/fff&text=F"
-              />
+              <input type="radio" name="test" checked />
               <img src="http://placehold.it/40x60/0bf/fff&text=F" />
             </label>
           </div>
@@ -146,8 +107,12 @@
           <button>Answer 4</button>
         </div>
       </section> -->
-    </main>
-
-    <script src="Screen2.js"></script>
-  </body>
-</html>
+      <!-- Screen 5 -->
+      <section id="screen5">
+        <div class="logo">TRIVIAL</div>
+        <div class="score">3/10</div>
+        <div class="avatar-placeholder">Avatar</div>
+        <div class="username-placeholder">Username</div>
+        <!-- gif appears here UwU -->
+        <button type="button" class="play-again">Play Again!</button>
+      </section>
