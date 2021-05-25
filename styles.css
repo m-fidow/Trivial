@@ -96,6 +96,14 @@ img {
 /* .header-container {
   
 } */
+.screen-logo {
+  /*! max-width: 150px; */ /*! text-align: right; */
+  padding: 20px;
+}
+
+.screen-logo > img:nth-child(1) {
+  max-width: 150px;
+}
 
 .name-header {
   padding-top: 20px;
