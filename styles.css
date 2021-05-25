@@ -136,29 +136,29 @@ div.character-selection {
 
 .character-container,
 .category-container,
-.difficulty-selection {
+.difficulty-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-evenly;
   padding: 20px;
 }
-.difficulty-selection {
+.difficulty-container {
   /*! text-align: center; */
   justify-content: center;
   width: 300px;
   height: 1;
 }
 
-.difficulty-container {
+.difficulty-selection {
   padding: 20px;
 }
-.difficulty-selection > label {
+.difficulty-container > label {
   padding: 6px;
   background: #3538d0;
 }
 
-.difficulty-selection > label > p {
+.difficulty-container > label > p {
   background: #3538d0;
   border: none;
   color: white;
@@ -243,8 +243,10 @@ div.character-selection {
   text-align: center;
 }
 [type="radio"]:checked + p {
-  outline: 2px solid rgb(95, 72, 72);
-  background-color: #a0a0a0a0;
+  /* outline: 2px solid rgb(117, 14, 14);
+  background-color: #a0a0a0a0; */
+  color: var(--app-pink);
+  font-size: 20px;
 }
 
 /* .category-container div {
