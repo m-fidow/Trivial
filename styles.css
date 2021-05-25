@@ -35,6 +35,9 @@ main {
   align-items: center;
   justify-content: space-around;
 }
+.hide {
+  visibility: hidden;
+}
 .screen {
   position: absolute;
   top: 150px;
@@ -49,12 +52,12 @@ main {
   border: 3px solid black;
   /* display: none; */
 }
-#screen1 {
+/* #screen1 {
   display: none;
-}
-#screen2 {
+} */
+/* #screen2 {
   display: none;
-}
+} */
 h2 {
   padding: 20px;
 }
