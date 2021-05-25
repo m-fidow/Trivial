@@ -153,13 +153,22 @@ div.character-selection {
 .difficulty-selection {
   padding: 20px;
 }
+/* .category-container > label {
+  padding: 2px;
+  background: var(--app-pink);
+}
+.category-container > label > p {
+  background: var(--app-pink);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+} */
 .difficulty-container > label {
   padding: 6px;
-  background: #3538d0;
+  background: var(--app-pink);
 }
-
 .difficulty-container > label > p {
-  background: #3538d0;
+  background: var(--app-pink);
   border: none;
   color: white;
   text-transform: uppercase;
@@ -245,7 +254,9 @@ div.character-selection {
 [type="radio"]:checked + p {
   /* outline: 2px solid rgb(117, 14, 14);
   background-color: #a0a0a0a0; */
-  color: var(--app-pink);
+  font-size: 20px;
+}
+[type="radio"]:checked {
   font-size: 20px;
 }
 
