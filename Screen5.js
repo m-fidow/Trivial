@@ -1,4 +1,8 @@
+// delete me when merged
 let score = 10;
+let userName = "Emily";
+let avatarImage = "/Tivial-AssetsAv01Red.svg";
+//delete me when merged
 const API_KEY = "4Y7M7LY0VDS6";
 let playAgainButton = document.querySelector(".play-again");
 let searchTerm = "trivia";
