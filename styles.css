@@ -277,7 +277,7 @@ div.character-selection {
   background: #FF006C;
   border-radius: 50%;
   border: 10px solid #152F75;
-  -webkit-filter: drop-shadow(12px 12px 0px #E8AF23);
-  filter: drop-shadow(12px 12px 0px #E8AF23);
+  /* -webkit-filter: drop-shadow(12px 12px 0px #E8AF23);
+  filter: drop-shadow(12px 12px 0px #E8AF23); */
   color: white;
 }
