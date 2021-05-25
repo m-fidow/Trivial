@@ -41,7 +41,7 @@ async function fetchQuestion() {
 }
 fetchQuestion();
 
-var username = "";
+let username = "";
 let confirmButton = document.querySelector(".confirm-button");
 confirmButton.addEventListener("click", confirm);
 
