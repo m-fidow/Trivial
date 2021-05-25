@@ -268,3 +268,14 @@ div.character-selection {
   padding: 30px;
   width: 30%;
 } */
+
+.score-board {
+  width: 100px;
+  height: 100px;
+  background: #FF006C;
+  border-radius: 50%;
+  border: 10px solid #152F75;
+  -webkit-filter: drop-shadow(12px 12px 0px #E8AF23);
+  filter: drop-shadow(12px 12px 0px #E8AF23);
+  color: white;
+}
