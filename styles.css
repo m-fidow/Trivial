@@ -55,6 +55,9 @@ main {
 #screen2 {
   display: none;
 }
+h2 {
+  padding: 20px;
+}
 /* #screen3 {
   /* display: none;} */
 img {
@@ -140,6 +143,31 @@ div.character-selection {
   justify-content: space-evenly;
   padding: 20px;
 }
+.difficulty-selection {
+  /*! text-align: center; */
+  justify-content: center;
+  width: 300px;
+  height: 1;
+}
+
+.difficulty-container {
+  padding: 20px;
+}
+.difficulty-selection > label {
+  padding: 6px;
+  background: #3538d0;
+}
+
+.difficulty-selection > label > p {
+  background: #3538d0;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* #screen3 > section:nth-child(4) {
+  
+} */
 
 .character-container > label {
   flex: 0 0 115px;
