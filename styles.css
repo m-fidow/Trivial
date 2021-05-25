@@ -55,9 +55,8 @@ main {
 #screen2 {
   display: none;
 }
-#screen3 {
-  display: none;
-}
+/* #screen3 {
+  /* display: none;} */
 img {
   max-width: 100%;
   max-height: 100%;
@@ -129,7 +128,7 @@ div.character-selection {
   padding: 20px;
 }
 
-.character-container {
+.character-container .category-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -215,8 +214,8 @@ div.character-selection {
   background-color: #a0a0a0a0;
 }
 
-.category-container div {
+/* .category-container div {
   background-color: blueviolet;
   padding: 30px;
   width: 30%;
-}
+} */
