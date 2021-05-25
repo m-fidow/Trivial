@@ -129,7 +129,8 @@ div.character-selection {
 }
 
 .character-container,
-.category-container {
+.category-container,
+.difficulty-selection {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
