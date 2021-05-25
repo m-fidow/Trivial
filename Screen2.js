@@ -41,7 +41,7 @@ async function fetchQuestion() {
 }
 fetchQuestion();
 
-let userName = "";
+var username = "";
 let confirmButton = document.querySelector(".confirm-button");
 confirmButton.addEventListener("click", confirm);
 
@@ -59,9 +59,9 @@ function getAvatar() {
 
 function confirm() {
   let input = document.querySelector("#name-input").value;
-  userName = input.charAt(0).toUpperCase() + input.slice(1);
-  console.log(userName);
+  username = input.charAt(0).toUpperCase() + input.slice(1);
+  // console.log(username);
   getAvatar();
   screen2.classList.add("hide");
-  screen3.classList.remove("hide");
+  // screen3.classList.remove("hide");
 }

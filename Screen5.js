@@ -1,6 +1,6 @@
 // delete me when merged
 let score = 10;
-// let userName = "Emily";
+// let username = "Emily";
 // let avatarImage = "/Tivial-AssetsAv01Red.svg";
 //delete me when merged
 const API_KEY = "4Y7M7LY0VDS6";
@@ -54,14 +54,12 @@ fetchGif();
 // document.querySelector(".hide-button");
 const avatarSelection = document.querySelector(".user-avatar");
 const usernameText = document.querySelector(".username-text");
-// let userName = "Emily";
-let avatarImage = "/Tivial-AssetsAv01Red.svg";
+// let username = "";
+// let avatarImage = "/Tivial-AssetsAv01Red.svg";
 
 function getAvatarAndUsername() {
-  //   usernameText = userName;
-  let userName = "Kevin";
-  usernameText.innerText = userName;
-  console.log(userName);
-  return userName;
+  //   usernameText = username;
+  usernameText.innerHTML = username;
+  console.log(username);
 }
 getAvatarAndUsername();
