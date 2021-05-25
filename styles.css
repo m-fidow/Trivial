@@ -105,16 +105,20 @@ img {
   max-width: 150px;
 }
 
-.name-header {
-  padding-top: 20px;
+.name-input {
+  padding: 20px;
 }
 
 input {
-  width: 200px;
+  width: 220px;
   padding: 10px;
   background-color: white;
   margin: 20px;
-  border-radius: 10px;
+  /*! border-radius: 10px; */
+  border: none;
+}
+div.character-selection {
+  padding: 20px;
 }
 
 .character-container {
