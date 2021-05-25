@@ -292,7 +292,9 @@ div.character-selection {
   color: white;
 }
 
-.avatar-position {
-  width: 100px;
-  height: 100px;
+.avatar-username-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
