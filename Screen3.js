@@ -30,52 +30,50 @@
 /*  TRIVIA API */
 //added variables for difficulty and cathegory
 
-let userName = "";
-let categorySelection = "";
+// let userName = "";
+// let categorySelection = "";
 let difficutlySelection = "";
 let data = {
-  categoryStorage:"",
-  difficultyStorage:"",
-}
-let selection = ""
-let difficulty = ""
+  categoryStorage: "",
+  difficultyStorage: "",
+};
+let selection = "";
+let difficulty = "";
 
-const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
+// const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 async function fetchQuestion() {
   console.log(selection);
-  console.log(difficulty)
+  console.log(difficulty);
   let response = await fetch(
     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
   );
-  
+
   let data = await response.json();
-  console.log(data)
-}
- 
-let getCat = document.querySelectorAll(".category-button")
-getCat.forEach((item)=>{
-  item.addEventListener("click",storeCategory)
-})
-
-function storeCategory(event){
-  console.log(event.target.dataset)
-  selection = event.target.dataset.category
-
+  console.log(data);
 }
 
-let getDifficulty = document.querySelectorAll(".difficulty-button")
-getDifficulty.forEach((item)=>{
-  item.addEventListener("click",storeDifficulty)
-})
+let getCat = document.querySelectorAll(".category-button");
+getCat.forEach((item) => {
+  item.addEventListener("click", storeCategory);
+});
 
-function storeDifficulty(event){
-  console.log(event.target.dataset)
-  difficulty = event.target.dataset.category
+function storeCategory(event) {
+  console.log(event.target.dataset);
+  selection = event.target.dataset.category;
 }
 
-let letsGo = document.querySelector(".letsgo-button")
+let getDifficulty = document.querySelectorAll(".difficulty-button");
+getDifficulty.forEach((item) => {
+  item.addEventListener("click", storeDifficulty);
+});
+
+function storeDifficulty(event) {
+  console.log(event.target.dataset);
+  difficulty = event.target.dataset.category;
+}
+
+let letsGo = document.querySelector(".letsgo-button");
 letsGo.addEventListener("click", fetchQuestion);
-
 
 // let confirmButton = document.querySelector(".confirm-button");
 // confirmButton.addEventListener("click", confirm);
@@ -86,12 +84,5 @@ letsGo.addEventListener("click", fetchQuestion);
 //   console.log(userName);
 //  }
 
-
-
-
-
-
-
-
 // Writing a Function for Feature 2: Character Selection Icon
-// each category 
+// each category
