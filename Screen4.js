@@ -1,9 +1,7 @@
-/*
-Feature 3: Question Display
-- Fetching 10 questions, and using a loop, loop through each question in 
-the array, displaing 1 at a time
-*/
-
+// Feature 3: Question Display
+// - Fetching 10 questions, and using a loop, loop through each question in
+// the array, displaing 1 at a time
+// */
 /*
 PSEUDO-CODE
 - SELECT THE QUESTION H2 IN THE DOM 
@@ -34,7 +32,6 @@ FUNCTION GET_CURRENT_QUESTION
   - USE DOT NOTATION TO FIND INCORRECT_ANSWERS_ARRAY IN QUESTIONS_ARRAY
   - 
   */
-
 const questionDisplay = document.querySelector(".question-h2");
 const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 // const generateQuestionButton = document.querySelector(
@@ -44,69 +41,123 @@ const displayCorrectAnswer = document.querySelector("#correct-answer");
 const displayIncorrectAnswers = document.querySelectorAll(".incorrect-answer");
 const progressBar = document.querySelector(".progress-bar");
 const showGameProgress = document.querySelector(".show-game-progress");
-let difficultySelection = "easy";
-let categorySelection = "9";
-let score = 0;
+
 let count = 0;
-let questionsArray = [];
+let score = 0;
+// let questionsArray = [];
 let startAgain = document.querySelector(".start-again");
-getQuestionsArray();
-
+// fetchQuestion();
+let questionCounter = 0;
 const maximumQuestions = 10;
-
 // if (questionCounter = maximumQuestions) {
 //   let finishedGame = document.getElementById("myAnchor").href;
 //   console.log(finishedGame)
 let letsGo = document.querySelector(".letsgo-button");
-letsGo.addEventListener("click", fetchQuestion);
+// letsGo.addEventListener("click", fetchQuestion);
 letsGo.addEventListener("click", goToScreen4);
+
 function goToScreen4() {
   screen3.classList.add("hide");
   screen4.classList.remove("hide");
-  getCurrentQuestion(questionsArray);
+  fetchQuestion();
+  getCurrentQuestion(fetchQuestion);
 }
+
 function startGame(questionsArray) {
-  questionsArray = [];
-  getQuestionsArray();
   count = 0;
   score = 0;
-  screen5.classList.add("hide");
-  screen3.classList.remove("hide");
+  questionCounter = 0;
+  questionsArray = [];
+  // fetchQuestion();
 }
 
 let allAnswers = document.querySelectorAll(".answer");
-async function getQuestionsArray() {
+// async function getQuestionsArray() {
+//   let response = await fetch(
+//     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
+//   );
+//   let data = await response.json();
+//   //   questionsArray = data.results;
+// }
+const API_KEY = "4Y7M7LY0VDS6";
+let playAgainButton = document.querySelector(".play-again");
+let searchTerm = "";
+let correctAnswerSpan = document.querySelector(".correct-answer-display");
+//A simple function that translates score into a search term for API to use
+function readScore(score) {
+  if (score == 0) {
+    searchTerm = "bad";
+  } else if (score > 1 && score <= 3) {
+    searchTerm = "try_again";
+  } else if (score > 3 && score <= 6) {
+    searchTerm = "not_bad";
+  } else if (score > 6 && score <= 9) {
+    searchTerm = "excited";
+  } else if (score == 10) {
+    searchTerm = "unstopable";
+  }
+}
+// readScore(score);
+
+const requestUrlGifApi = `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`;
+async function fetchGif() {
   let response = await fetch(
-    `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
+    `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`
   );
   let data = await response.json();
-  questionsArray = data.results;
+  let gifUrl = data.results[0].media[0].mediumgif.url;
+  let img = document.createElement("img");
+  img.setAttribute("src", gifUrl);
+  let gifdiv = document.createElement("div");
+  gifdiv.appendChild(img);
+  playAgainButton.parentNode.insertBefore(gifdiv, playAgainButton);
+  console.log(data.results[0].media[0].mediumgif.url);
 }
 function goToScreen5() {
   screen4.classList.add("hide");
   screen5.classList.remove("hide");
+  readScore(score);
+  fetchGif();
 }
-function getCurrentQuestion(questionsArray) {
-  console.log(questionsArray);
+
+function increaseScoreOnClick() {
+  for (let i = 0; i < allAnswers.length; i++) {
+    allAnswers[i].onclick = () => {
+      getCurrentQuestion(questionsArray);
+      if (allAnswers[i].id === "correct-answer") {
+        console.log("correct");
+        score++;
+        console.log(`score ` + score);
+      }
+    };
+  }
+  return score;
+}
+increaseScoreOnClick();
+function getCurrentQuestion(fetchQuestion) {
+  console.log(fetchQuestion);
   if (count >= 10) {
     goToScreen5();
   }
-  currentQuestion = questionsArray[count].question;
+  currentQuestion = fetchQuestion[count].question;
   questionDisplay.textContent = currentQuestion;
-  let correctAnswer = questionsArray[count].correct_answer;
+  let correctAnswer = fetchQuestion[count].correct_answer;
   displayCorrectAnswer.innerHTML = correctAnswer;
-  let incorrectAnswersArray = questionsArray[count].incorrect_answers;
+  let incorrectAnswersArray = fetchQuestion[count].incorrect_answers;
   for (let i = 0; i < incorrectAnswersArray.length; i++) {
     displayIncorrectAnswers[i].innerHTML = incorrectAnswersArray[i];
   }
   count++;
   console.log(count);
-
+  questionCounter++;
+  showGameProgress.style.width = `${
+    (questionCounter / maximumQuestions) * 100
+  }%`;
+  showGameProgress.innerText = `${questionCounter}/${maximumQuestions}`;
+  // IF MAXIMUM QUESTIONS REACHED LINK TO SCREEN 5
   shuffle();
-  showGameProgress.style.width = `${(count / maximumQuestions) * 100}%`;
-  showGameProgress.innerText = `${count}/${maximumQuestions}`;
+  correctAnswerSpan.innerHTML = score;
 }
-
 function shuffle() {
   let parent = document.getElementById("answers");
   let button = document.createDocumentFragment();
@@ -117,6 +168,12 @@ function shuffle() {
   }
   parent.appendChild(button);
 }
+playAgainButton.addEventListener("click", goToScreen1);
+function goToScreen1() {
+  screen5.classList.add("hide");
+  screen3.classList.remove("hide");
+}
+// fetchGif();
 //handle answer response
 /* 
   ADD ANSWER CLASS TO ALL ANSWERS
@@ -127,26 +184,22 @@ function shuffle() {
    - INCREASE SCORE
   RETURN SCORE 
   */
-
-function increaseScoreOnClick() {
-  for (let i = 0; i < allAnswers.length; i++) {
-    allAnswers[i].onclick = () => {
-      getCurrentQuestion(questionsArray);
-      if (allAnswers[i].id === "correct-answer") {
-        console.log("correct");
-        score++;
-        console.log(`score ` + score);
-        correctAnswerSpan.innerHTML = score;
-      }
-    };
-  }
-}
-increaseScoreOnClick();
-
+// function increaseScoreOnClick() {
+//   for (let i = 0; i < allAnswers.length; i++) {
+//     allAnswers[i].onclick = () => {
+//       getCurrentQuestion(questionsArray);
+//       if (allAnswers[i].id === "correct-answer") {
+//         console.log("correct");
+//         score++;
+//         console.log(`score ` + score);
+//       }
+//     };
+//   }
+// }
+// increaseScoreOnClick();
 // let totalScore = increaseScoreOnClick();
 // console.log();
 // generateQuestionButton.addEventListener("click", () =>
 //   getCurrentQuestion(questionsArray)
 // );
-
 // startAgain.addEventListener("click", startGame);

@@ -58,14 +58,17 @@ function getAvatar() {
   }
 }
 //moved from screen 5, needs rearanging
-const usernameText = document.querySelector(".username-text");
+const usernameTextS4 = document.querySelector(".username-text-screen4");
+const usernameTextS5 = document.querySelector(".username-text-screen5");
 // let username = "";
 // let avatarImage = "/Tivial-AssetsAv01Red.svg";
 
 function getAvatarAndUsername() {
-  usernameText.innerHTML = username;
-  console.log(username);
-  document.getElementById("user-avatar").src = avatarImage;
+  usernameTextS4.innerHTML = username;
+  usernameTextS5.innerHTML = username;
+
+  document.getElementById("user-avatar-screen4").src = avatarImage;
+  document.getElementById("user-avatar-screen5").src = avatarImage;
 }
 // getAvatarAndUsername(username);
 // lines 59 - 71 needs to be sorted after work on screen 5 is done

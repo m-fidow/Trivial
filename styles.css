@@ -307,7 +307,7 @@ div.character-selection {
   font-size: 35px;
 }
 
-.avatar-unsername-container {
+.avatar-username-container-screen5 {
   position: absolute;
   top: 60%;
   left: 60%;
@@ -322,9 +322,12 @@ div.character-selection {
 }
 .username-text {
   text-transform: uppercase;
-  text-decoration: underline;
-  color: black;
+  /* text-decoration: underline; */
+  color: #f8c30d;
   width: 100%;
+  background: #152f75;
+  border: 1px solid;
+  border-radius: 5px;
 }
 /* Screen4 */
 .progress-bar {
@@ -348,6 +351,16 @@ div.character-selection {
   height: 100%;
   box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #ff9472;
   width: 0px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.avatar-username-container-screen4 {
+  width: 20%;
 }
 /* Screen 5 */
 .speech-bubble {
