@@ -102,16 +102,9 @@ function getCurrentQuestion(questionsArray) {
   count++;
   console.log(count);
 
-  questionCounter++;
-  showGameProgress.style.width = `${
-    (questionCounter / maximumQuestions) * 100
-  }%`;
-  showGameProgress.innerText = `${questionCounter}/${maximumQuestions}`;
-  // IF MAXIMUM QUESTIONS REACHED LINK TO SCREEN 5
-
   shuffle();
-
-  return count;
+  showGameProgress.style.width = `${(count / maximumQuestions) * 100}%`;
+  showGameProgress.innerText = `${count}/${maximumQuestions}`;
 }
 
 function shuffle() {
