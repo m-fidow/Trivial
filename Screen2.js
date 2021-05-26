@@ -29,9 +29,10 @@
 
 /*  TRIVIA API */
 //added variables for difficulty and cathegory
+let screen3 = document.querySelector("#screen3");
 let difficultySelection = "easy";
 let categorySelection = "1";
-let screen3 = document.querySelector("#screen3");
+
 const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 async function fetchQuestion() {
   let response = await fetch(
