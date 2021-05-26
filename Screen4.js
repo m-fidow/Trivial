@@ -51,7 +51,7 @@ let count = 0;
 let questionsArray = [];
 let startAgain = document.querySelector(".start-again");
 getQuestionsArray();
-let questionCounter = 0;
+
 const maximumQuestions = 10;
 
 // if (questionCounter = maximumQuestions) {
