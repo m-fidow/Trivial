@@ -72,10 +72,13 @@ async function getQuestionsArray() {
   let data = await response.json();
   questionsArray = data.results;
 }
-
+function goToScreen5() {
+  screen4.classList.add("hide");
+  screen5.classList.remove("hide");
+}
 function getCurrentQuestion(questionsArray) {
   if (count >= 10) {
-    alert("Count ten reached");
+    goToScreen5();
   }
   currentQuestion = questionsArray[count].question;
   questionDisplay.textContent = currentQuestion;
@@ -87,9 +90,6 @@ function getCurrentQuestion(questionsArray) {
   }
   count++;
   console.log(count);
-  if (count >= 11) {
-    alert("Count ten reached");
-  }
 
   questionCounter++;
   showGameProgress.style.width = `${

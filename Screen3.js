@@ -32,6 +32,7 @@
 
 // let userName = "";
 // let categorySelection = "";
+let screen4 = document.querySelector("#screen4");
 let difficutlySelection = "";
 let data = {
   categoryStorage: "",
@@ -52,8 +53,8 @@ async function fetchQuestion() {
   console.log(data);
 }
 
-let getCat = document.querySelectorAll(".category-button");
-getCat.forEach((item) => {
+let getCategory = document.querySelectorAll(".category-button");
+getCategory.forEach((item) => {
   item.addEventListener("click", storeCategory);
 });
 
@@ -73,8 +74,11 @@ function storeDifficulty(event) {
 }
 
 let letsGo = document.querySelector(".letsgo-button");
-letsGo.addEventListener("click", fetchQuestion);
-
+letsGo.addEventListener("click", goToScreen4);
+function goToScreen4() {
+  screen3.classList.add("hide");
+  screen4.classList.remove("hide");
+}
 // let confirmButton = document.querySelector(".confirm-button");
 // confirmButton.addEventListener("click", confirm);
 

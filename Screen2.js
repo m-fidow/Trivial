@@ -79,5 +79,5 @@ function confirm() {
   screen2.classList.add("hide");
   // screen3.classList.remove("hide");
   //keep line 78, remove line 80 after working on screen 5 is done
-  screen5.classList.remove("hide");
+  screen3.classList.remove("hide");
 }
