@@ -6,9 +6,10 @@
 const API_KEY = "4Y7M7LY0VDS6";
 let playAgainButton = document.querySelector(".play-again");
 let searchTerm = "trivia";
-
+let correctAnswerSpan = document.querySelector(".correct-answer-display");
 //A simple function that translates score into a search term for API to use
 function readScore(score) {
+  correctAnswerSpan.innerHTML = score;
   if (score == 0) {
     searchTerm = "bad";
   } else if (score > 0 && score <= 3) {

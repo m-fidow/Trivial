@@ -51,6 +51,7 @@ async function fetchQuestion() {
 
   let data = await response.json();
   console.log(data);
+  questionsArray = data.results;
 }
 
 let getCategory = document.querySelectorAll(".category-button");
