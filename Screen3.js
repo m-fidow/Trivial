@@ -73,12 +73,12 @@ function storeDifficulty(event) {
   difficulty = event.target.dataset.category;
 }
 
-let letsGo = document.querySelector(".letsgo-button");
-letsGo.addEventListener("click", goToScreen4);
-function goToScreen4() {
-  screen3.classList.add("hide");
-  screen4.classList.remove("hide");
-}
+// let letsGo = document.querySelector(".letsgo-button");
+// letsGo.addEventListener("click", goToScreen4);
+// function goToScreen4() {
+//   screen3.classList.add("hide");
+//   screen4.classList.remove("hide");
+// }
 // let confirmButton = document.querySelector(".confirm-button");
 // confirmButton.addEventListener("click", confirm);
 

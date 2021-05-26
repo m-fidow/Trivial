@@ -56,7 +56,13 @@ const maximumQuestions = 10;
 // if (questionCounter = maximumQuestions) {
 //   let finishedGame = document.getElementById("myAnchor").href;
 //   console.log(finishedGame)
-
+let letsGo = document.querySelector(".letsgo-button");
+letsGo.addEventListener("click", goToScreen4);
+function goToScreen4() {
+  screen3.classList.add("hide");
+  screen4.classList.remove("hide");
+  getCurrentQuestion(questionsArray);
+}
 function startGame(questionsArray) {
   questionsArray = [];
   getQuestionsArray();
