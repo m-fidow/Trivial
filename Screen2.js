@@ -57,15 +57,14 @@ function getAvatar() {
   }
 }
 //moved from screen 5, needs rearanging
-const avatarSelection = document.querySelector(".user-avatar");
 const usernameText = document.querySelector(".username-text");
 // let username = "";
 // let avatarImage = "/Tivial-AssetsAv01Red.svg";
 
 function getAvatarAndUsername() {
-  //   usernameText = username;
   usernameText.innerHTML = username;
   console.log(username);
+  document.getElementById("user-avatar").src = avatarImage;
 }
 // getAvatarAndUsername(username);
 // lines 59 - 71 needs to be sorted after work on screen 5 is done
