@@ -276,11 +276,19 @@ div.character-selection {
 } */
 
 /*Screen 5*/
+.score-board-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  height: 300px;
+}
 
 .score-board {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   background: #ff006c;
   border-radius: 50%;
   border: 10px solid #152f75;
@@ -288,15 +296,30 @@ div.character-selection {
   justify-content: center;
   /* -webkit-filter: drop-shadow(12px 12px 0px #E8AF23);
   filter: drop-shadow(12px 12px 0px #E8AF23); */
+  text-align: center;
+  padding: 20px;
 }
 
 .score-text {
-  color: white;
+  font-size: 35px;
 }
 
-.avatar-username-container {
+.avatar-unsername-container {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  /*! right: 50px; */
+  width: 20%;
+  /*! text-align: center; */ /*! display: inline-block; */
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column;
+  /*! flex-wrap: wrap; */ /*! justify-content: center; */ /*! align-content: center; */
+  align-items: center;
+  /*! padding: 20px; */
+}
+.username-text {
+  background: red;
+  text-transform: uppercase;
+
+  color: white;
 }
