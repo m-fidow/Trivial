@@ -40,7 +40,7 @@ let data = {
 };
 let selection = "";
 let difficulty = "";
-
+// let questionsArray = [];
 // const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 async function fetchQuestion() {
   console.log(selection);

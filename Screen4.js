@@ -46,10 +46,11 @@ const progressBar = document.querySelector(".progress-bar");
 const showGameProgress = document.querySelector(".show-game-progress");
 let difficultySelection = "easy";
 let categorySelection = "9";
+let score = 0;
 let count = 0;
 let questionsArray = [];
 let startAgain = document.querySelector(".start-again");
-// fetchQuestion();
+getQuestionsArray();
 let questionCounter = 0;
 const maximumQuestions = 10;
 
@@ -62,23 +63,23 @@ letsGo.addEventListener("click", goToScreen4);
 function goToScreen4() {
   screen3.classList.add("hide");
   screen4.classList.remove("hide");
-  //   getCurrentQuestion(questionsArray);
+  getCurrentQuestion(questionsArray);
 }
 function startGame(questionsArray) {
   questionsArray = [];
-  fetchQuestion();
+  getQuestionsArray();
   count = 0;
   score = 0;
 }
-let score = 0;
+
 let allAnswers = document.querySelectorAll(".answer");
-// async function getQuestionsArray() {
-//   let response = await fetch(
-//     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
-//   );
-//   let data = await response.json();
-//   //   questionsArray = data.results;
-// }
+async function getQuestionsArray() {
+  let response = await fetch(
+    `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
+  );
+  let data = await response.json();
+  questionsArray = data.results;
+}
 function goToScreen5() {
   screen4.classList.add("hide");
   screen5.classList.remove("hide");
@@ -140,6 +141,7 @@ function increaseScoreOnClick() {
         console.log("correct");
         score++;
         console.log(`score ` + score);
+        correctAnswerSpan.innerHTML = score;
       }
     };
   }
