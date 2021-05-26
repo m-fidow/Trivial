@@ -70,6 +70,8 @@ function startGame(questionsArray) {
   getQuestionsArray();
   count = 0;
   score = 0;
+  screen5.classList.add("hide");
+  screen3.classList.remove("hide");
 }
 
 let allAnswers = document.querySelectorAll(".answer");

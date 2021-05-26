@@ -40,7 +40,7 @@ async function fetchGif() {
   console.log(data.results[0].media[0].mediumgif.url);
 }
 fetchGif();
-
+playAgainButton.addEventListener("click", startGame);
 // const otherButton = document.querySelector(".tester");
 // console.log(otherButton);
 
