@@ -31,7 +31,7 @@
                 type="text"
                 pattern="[A-Za-z]{1,10}"
                 id="name-input"
-                title="Username must not be than 10 letters." />
+                title="Username must not be than 10 letters."  />
           </div>
           
         <div class="character-selection">
@@ -44,6 +44,7 @@
                 id="A"
                 name="avatar"
                 value="/Tivial-Assets\Av01Red.svg"
+                checked
               />
               <img src="/Tivial-Assets\Av01Red.svg" />
             </label>
@@ -98,6 +99,7 @@
                 id="F"
                 name="avatar"
                 value="/Tivial-Assets\Av06Violet.svg"
+
               />
               <img src="/Tivial-Assets\Av06Violet.svg" />
             </label>
@@ -114,7 +116,7 @@
         <h2>Select a category</h2>
         <div class="category-container" >
           <label>
-              <input class ="category-button" data-category="17" type="radio" name="category"/>
+              <input class ="category-button" data-category="17" type="radio" name="category" checked/>
               <p> Science and Nature</P>
             </label>
 
@@ -147,7 +149,7 @@
           <h2>Difficulty</h2>
           <div class="difficulty-container">
             <label>
-                <input class ="difficulty-button" data-category= "Easy" type="radio" name="difficulty" />
+                <input class ="difficulty-button" data-category= "Easy" type="radio" name="difficulty" checked />
                 <p> Easy </P>
               </label> 
   
@@ -200,7 +202,7 @@
         </div>
         <div class="score-board-container">
           <div class="score-board">
-            <div class="score-text"><span class="correct-answer-display">5</span>/10</div>
+            <div class="score-text"><span class="correct-answer-display"></span>/10</div>
           </div>
           <div class="avatar-unsername-container">
             <img id="user-avatar" src="/Tivial-Assets\Av01Red.svg" >
