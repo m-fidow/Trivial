@@ -52,14 +52,14 @@ fetchGif();
 //   document.querySelector(".tester").style.display = "none";
 // }
 // document.querySelector(".hide-button");
-const avatarSelection = document.querySelector(".user-avatar");
-const usernameText = document.querySelector(".username-text");
-// let username = "";
-// let avatarImage = "/Tivial-AssetsAv01Red.svg";
+// const avatarSelection = document.querySelector(".user-avatar");
+// const usernameText = document.querySelector(".username-text");
+// // let username = "";
+// // let avatarImage = "/Tivial-AssetsAv01Red.svg";
 
-function getAvatarAndUsername() {
-  //   usernameText = username;
-  usernameText.innerHTML = username;
-  console.log(username);
-}
-getAvatarAndUsername();
+// function getAvatarAndUsername() {
+//   //   usernameText = username;
+//   usernameText.innerHTML = username;
+//   console.log(username);
+// }
+// getAvatarAndUsername(username);

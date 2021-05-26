@@ -56,12 +56,28 @@ function getAvatar() {
     }
   }
 }
+//moved from screen 5, needs rearanging
+const avatarSelection = document.querySelector(".user-avatar");
+const usernameText = document.querySelector(".username-text");
+// let username = "";
+// let avatarImage = "/Tivial-AssetsAv01Red.svg";
+
+function getAvatarAndUsername() {
+  //   usernameText = username;
+  usernameText.innerHTML = username;
+  console.log(username);
+}
+// getAvatarAndUsername(username);
+// lines 59 - 71 needs to be sorted after work on screen 5 is done
 
 function confirm() {
   let input = document.querySelector("#name-input").value;
   username = input.charAt(0).toUpperCase() + input.slice(1);
   // console.log(username);
   getAvatar();
+  getAvatarAndUsername();
   screen2.classList.add("hide");
   // screen3.classList.remove("hide");
+  //keep line 78, remove line 80 after working on screen 5 is done
+  screen5.classList.remove("hide");
 }
