@@ -30,17 +30,17 @@
 /*  TRIVIA API */
 //added variables for difficulty and cathegory
 let screen3 = document.querySelector("#screen3");
-let difficultySelection = "easy";
-let categorySelection = "1";
+// let difficultySelection = "easy";
+// let categorySelection = "1";
 
-const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
-async function fetchQuestion() {
-  let response = await fetch(
-    "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
-  );
-  let data = await response.json();
-}
-fetchQuestion();
+// const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
+// async function fetchQuestion() {
+//   let response = await fetch(
+//     "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
+//   );
+//   let data = await response.json();
+// }
+// fetchQuestion();
 
 let username = "";
 let confirmButton = document.querySelector(".confirm-button");

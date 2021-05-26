@@ -1,5 +1,5 @@
 // delete me when merged
-let score = 10;
+// let score = 10;
 // let username = "Emily";
 // let avatarImage = "/Tivial-AssetsAv01Red.svg";
 //delete me when merged
