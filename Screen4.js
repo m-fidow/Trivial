@@ -48,9 +48,9 @@ let startAgain = document.querySelector(".start-again");
 let questionCounter = 0;
 const maximumQuestions = 10;
 
-let letsGo = document.querySelector(".letsgo-button");
+let fetchButton = document.querySelector(".fetch-button");
 
-letsGo.addEventListener("click", goToScreen4);
+fetchButton.addEventListener("click", goToScreen4);
 
 function goToScreen4() {
   // screen3.classList.add("hide");
