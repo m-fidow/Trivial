@@ -34,9 +34,7 @@ FUNCTION GET_CURRENT_QUESTION
   */
 const questionDisplay = document.querySelector(".question-h2");
 const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
-// const generateQuestionButton = document.querySelector(
-//   ".generate-question-test"
-// );
+
 const displayCorrectAnswer = document.querySelector("#correct-answer");
 const displayIncorrectAnswers = document.querySelectorAll(".incorrect-answer");
 const progressBar = document.querySelector(".progress-bar");
@@ -49,11 +47,9 @@ let startAgain = document.querySelector(".start-again");
 // fetchQuestion();
 let questionCounter = 0;
 const maximumQuestions = 10;
-// if (questionCounter = maximumQuestions) {
-//   let finishedGame = document.getElementById("myAnchor").href;
-//   console.log(finishedGame)
+
 let letsGo = document.querySelector(".letsgo-button");
-// letsGo.addEventListener("click", fetchQuestion);
+
 letsGo.addEventListener("click", goToScreen4);
 
 function goToScreen4() {
@@ -68,57 +64,9 @@ function startGame(questionsArray) {
   score = 0;
   questionCounter = 0;
   questionsArray = [];
-  // fetchQuestion();
 }
 
 let allAnswers = document.querySelectorAll(".answer");
-// async function getQuestionsArray() {
-//   let response = await fetch(
-//     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
-//   );
-//   let data = await response.json();
-//   //   questionsArray = data.results;
-// }
-const API_KEY = "4Y7M7LY0VDS6";
-let playAgainButton = document.querySelector(".play-again");
-let searchTerm = "";
-let correctAnswerSpan = document.querySelector(".correct-answer-display");
-//A simple function that translates score into a search term for API to use
-function readScore(score) {
-  if (score == 0) {
-    searchTerm = "bad";
-  } else if (score > 1 && score <= 3) {
-    searchTerm = "try_again";
-  } else if (score > 3 && score <= 6) {
-    searchTerm = "not_bad";
-  } else if (score > 6 && score <= 9) {
-    searchTerm = "excited";
-  } else if (score == 10) {
-    searchTerm = "unstopable";
-  }
-}
-// readScore(score);
-
-const requestUrlGifApi = `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`;
-async function fetchGif() {
-  let response = await fetch(
-    `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`
-  );
-  let data = await response.json();
-  let gifUrl = data.results[0].media[0].mediumgif.url;
-  let img = document.createElement("img");
-  img.setAttribute("src", gifUrl);
-  let gifdiv = document.createElement("div");
-  gifdiv.appendChild(img);
-  playAgainButton.parentNode.insertBefore(gifdiv, playAgainButton);
-  console.log(data.results[0].media[0].mediumgif.url);
-}
-function goToScreen5() {
-  screen4.classList.add("hide");
-  screen5.classList.remove("hide");
-  readScore(score);
-  fetchGif();
-}
 
 function increaseScoreOnClick() {
   for (let i = 0; i < allAnswers.length; i++) {
@@ -168,38 +116,58 @@ function shuffle() {
   }
   parent.appendChild(button);
 }
-playAgainButton.addEventListener("click", goToScreen1);
-function goToScreen1() {
-  screen5.classList.add("hide");
-  screen3.classList.remove("hide");
-}
-// fetchGif();
-//handle answer response
-/* 
-  ADD ANSWER CLASS TO ALL ANSWERS
-  SELECT ANSWERS
-  LOOP THOUGH NODELIST
-  ADD CLICK LISTENER TO ALL
-  IF CLICKED ANSWER HAS ID OF "CORRECT-ANSWER"
-   - INCREASE SCORE
-  RETURN SCORE 
-  */
-// function increaseScoreOnClick() {
-//   for (let i = 0; i < allAnswers.length; i++) {
-//     allAnswers[i].onclick = () => {
-//       getCurrentQuestion(questionsArray);
-//       if (allAnswers[i].id === "correct-answer") {
-//         console.log("correct");
-//         score++;
-//         console.log(`score ` + score);
-//       }
-//     };
+
+/*GIF */
+// async function getQuestionsArray() {
+//   let response = await fetch(
+//     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
+//   );
+//   let data = await response.json();
+//   //   questionsArray = data.results;
+// }
+// const API_KEY = "4Y7M7LY0VDS6";
+// let playAgainButton = document.querySelector(".play-again");
+// let searchTerm = "";
+// let correctAnswerSpan = document.querySelector(".correct-answer-display");
+// //A simple function that translates score into a search term for API to use
+// function readScore(score) {
+//   if (score == 0) {
+//     searchTerm = "bad";
+//   } else if (score > 1 && score <= 3) {
+//     searchTerm = "try_again";
+//   } else if (score > 3 && score <= 6) {
+//     searchTerm = "not_bad";
+//   } else if (score > 6 && score <= 9) {
+//     searchTerm = "excited";
+//   } else if (score == 10) {
+//     searchTerm = "unstopable";
 //   }
 // }
-// increaseScoreOnClick();
-// let totalScore = increaseScoreOnClick();
-// console.log();
-// generateQuestionButton.addEventListener("click", () =>
-//   getCurrentQuestion(questionsArray)
-// );
-// startAgain.addEventListener("click", startGame);
+// readScore(score);
+
+// const requestUrlGifApi = `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`;
+// async function fetchGif() {
+//   let response = await fetch(
+//     `https://g.tenor.com/v1/search?q=${searchTerm}&key=${API_KEY}&limit=1`
+//   );
+//   let data = await response.json();
+//   let gifUrl = data.results[0].media[0].mediumgif.url;
+//   let img = document.createElement("img");
+//   img.setAttribute("src", gifUrl);
+//   let gifdiv = document.createElement("div");
+//   gifdiv.appendChild(img);
+//   playAgainButton.parentNode.insertBefore(gifdiv, playAgainButton);
+//   console.log(data.results[0].media[0].mediumgif.url);
+// }
+// function goToScreen5() {
+//   screen4.classList.add("hide");
+//   screen5.classList.remove("hide");
+//   readScore(score);
+//   fetchGif();
+// }
+
+// playAgainButton.addEventListener("click", goToScreen1);
+// function goToScreen1() {
+//   screen5.classList.add("hide");
+//   screen3.classList.remove("hide");
+// }
