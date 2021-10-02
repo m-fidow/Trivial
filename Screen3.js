@@ -30,8 +30,8 @@ let data = {
   categoryStorage: "",
   difficultyStorage: "",
 };
-let selection = "";
-let difficulty = "";
+let selection = "17";
+let difficulty = "easy";
 // let questionsArray = [];
 
 // const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;

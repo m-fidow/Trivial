@@ -53,8 +53,9 @@ let letsGo = document.querySelector(".letsgo-button");
 letsGo.addEventListener("click", goToScreen4);
 
 function goToScreen4() {
-  screen3.classList.add("hide");
-  screen4.classList.remove("hide");
+  // screen3.classList.add("hide");
+  // screen4.classList.remove("hide");
+  console.log("I'm here");
   fetchQuestion();
   getCurrentQuestion(fetchQuestion);
 }

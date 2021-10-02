@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Trivial</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-   
-    <main> 
+    <main>
       <!-- Screen 1 -->
-      <section id="screen1" class="screen flex" >
+      <!-- <section id="screen1" class="screen flex" >
         <div id="home-logo">
           <img src="/Tivial-Assets/Logo-Trivial/00LogoMerged.svg" alt="Logo" />
         </div>
         <button class="screen-button start-button" src="#screen2">START</button>
-      </section>
+      </section> -->
 
       <!-- Screen 2-->
-        <section id="screen2" class="screen flex hide">
+      <!-- <section id="screen2" class="screen flex hide">
           <div class="screen-logo">
             <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="">
           </div>
@@ -106,10 +108,10 @@
           </div>
           <button type="button" class=" screen-button confirm-button ">CONFIRM</button>
         </form>
-      </section>
+      </section> -->
 
       <!-- Screen3 -->
-      <section id="screen3" class="screen flex hide">
+      <!-- <section id="screen3" class="screen flex hide">
         <div class="screen-logo">
           <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="">
         </div>
@@ -167,61 +169,64 @@
           </section>  
           
         </section>
+      </section> -->
+      <br />
+      <!-- Screen 4 -->
+
+      <section id="screen4" class="screen4 screen flex">
+        <button class="letsgo-button screen-button confirm-button">
+          LET'S GO
+        </button>
+        <div class="header">
+          <div class="avatar-username-container-screen4">
+            <img id="user-avatar-screen4" src="/Tivial-Assets\Av01Red.svg" />
+            <div class="username-text-screen4">Username</div>
+          </div>
+          <div class="screen-logo">
+            <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="" />
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="show-game-progress"></div>
+          <div class="progress"></div>
+          <span class="show-game-progress"></span>
+        </div>
+        <div class="question speech-bubble">
+          <h2 class="question-h2">Question</h2>
+        </div>
+        <div id="answers" class="flex">
+          <button id="correct-answer" class="answer">Answer 1</button>
+          <button class="incorrect-answer answer incorrect-1">Answer 2</button>
+          <button class="incorrect-answer answer incorrect-2">Answer 3</button>
+          <button class="incorrect-answer answer incorrect-3">Answer 4</button>
+        </div>
       </section>
-<br />
-     <!-- Screen 4 -->
-     <section id="screen4" class="screen4 screen flex hide">
-          <div class="header">
-            <div class="avatar-username-container-screen4">
-              <img id="user-avatar-screen4" src="/Tivial-Assets\Av01Red.svg" >
-              <div class="username-text-screen4">Username</div>
-            </div>
-            <div class="screen-logo">
-              <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="" />
-            </div>
-          </div>
-          <div class="progress-bar">
-            <div class="show-game-progress"></div>
-            <div class="progress"></div>
-            <span class="show-game-progress"></span>
-          </div>
-          <div class="question speech-bubble">
-            <h2 class="question-h2">Question</h2>
-          </div>
-          <div id="answers" class="flex">
-            <button id="correct-answer" class="answer">Answer 1</button>
-            <button class="incorrect-answer answer incorrect-1">Answer 2</button>
-            <button class="incorrect-answer answer incorrect-2">Answer 3</button>
-            <button class="incorrect-answer answer incorrect-3">Answer 4</button>
-          </div>
-</section>
       <!-- Screen 5 -->
       <section id="screen5" class="screen flex hide">
         <div class="screen-logo">
-          <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="">
+          <img src="/Tivial-Assets/Logo-Trivial/01LogoBase.svg" alt="" />
         </div>
         <div class="score-board-container">
           <div class="score-board">
-            <div class="score-text"><span class="correct-answer-display"></span>/10</div>
+            <div class="score-text">
+              <span class="correct-answer-display"></span>/10
+            </div>
           </div>
           <div class="avatar-username-container-screen5">
-            <img id="user-avatar-screen5" src="/Tivial-Assets\Av01Red.svg" >
+            <img id="user-avatar-screen5" src="/Tivial-Assets\Av01Red.svg" />
             <div class="username-text-screen5">Username</div>
           </div>
         </div>
-        
-        
+
         <!-- gif appears here UwU -->
         <button type="button" class="play-again">Play Again!</button>
       </section>
-
     </main>
-    <script src="Screen4.js"></script> 
+    <script src="Screen4.js"></script>
     <script src="Screen3.js"></script>
     <script src="Screen1.js"></script>
     <script src="Screen2.js"></script>
 
-   
     <script src="Screen5.js"></script>
   </body>
 </html>
