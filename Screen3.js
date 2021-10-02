@@ -40,6 +40,7 @@ async function fetchQuestion() {
   let data = await response.json();
   // console.log(data);
   questionsArray = data.results;
+  return questionsArray;
   console.log(questionsArray);
 }
 

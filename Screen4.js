@@ -52,9 +52,7 @@ let fetchButton = document.querySelector(".fetch-button");
 let displayFirstQuestion = document.querySelector(
   ".displayFirstQuestion-button"
 );
-displayFirstQuestion.addEventListener("click", () => {
-  alert("hello");
-});
+
 fetchButton.addEventListener("click", goToScreen4);
 
 function goToScreen4() {
@@ -62,7 +60,7 @@ function goToScreen4() {
   // screen4.classList.remove("hide");
   console.log("I'm here");
   fetchQuestion();
-  getCurrentQuestion(fetchQuestion);
+  getCurrentQuestion();
 }
 
 function startGame(questionsArray) {
@@ -71,33 +69,26 @@ function startGame(questionsArray) {
   questionCounter = 0;
   questionsArray = [];
 }
+displayFirstQuestion.addEventListener("click", getFirstQuestion);
 
 let allAnswers = document.querySelectorAll(".answer");
-
-function increaseScoreOnClick() {
-  for (let i = 0; i < allAnswers.length; i++) {
-    allAnswers[i].onclick = () => {
-      getCurrentQuestion(questionsArray);
-      if (allAnswers[i].id === "correct-answer") {
-        console.log("correct");
-        score++;
-        console.log(`score ` + score);
-      }
-    };
-  }
-  return score;
+async function getFirstQuestion() {
+  let lala = await fetchQuestion();
+  console.log(lala[0].question);
+  questionDisplay.innerText = lala[0].question;
 }
-increaseScoreOnClick();
-function getCurrentQuestion(fetchQuestion) {
-  console.log(fetchQuestion);
+async function getCurrentQuestion() {
+  // console.log(fetchQuestion);
   if (count >= 10) {
     goToScreen5();
   }
-  currentQuestion = fetchQuestion[count].question;
+  let questions = await fetchQuestion();
+  currentQuestion = questions[count].question;
+
   questionDisplay.textContent = currentQuestion;
-  let correctAnswer = fetchQuestion[count].correct_answer;
+  let correctAnswer = questions[count].correct_answer;
   displayCorrectAnswer.innerHTML = correctAnswer;
-  let incorrectAnswersArray = fetchQuestion[count].incorrect_answers;
+  let incorrectAnswersArray = questions[count].incorrect_answers;
   for (let i = 0; i < incorrectAnswersArray.length; i++) {
     displayIncorrectAnswers[i].innerHTML = incorrectAnswersArray[i];
   }
@@ -112,6 +103,20 @@ function getCurrentQuestion(fetchQuestion) {
   shuffle();
   correctAnswerSpan.innerHTML = score;
 }
+function increaseScoreOnClick() {
+  for (let i = 0; i < allAnswers.length; i++) {
+    allAnswers[i].onclick = () => {
+      getCurrentQuestion(questionsArray);
+      if (allAnswers[i].id === "correct-answer") {
+        console.log("correct");
+        score++;
+        console.log(`score ` + score);
+      }
+    };
+  }
+  return score;
+}
+increaseScoreOnClick();
 function shuffle() {
   let parent = document.getElementById("answers");
   let button = document.createDocumentFragment();
