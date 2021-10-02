@@ -32,20 +32,17 @@ let data = {
 };
 let selection = "17";
 let difficulty = "easy";
-// let questionsArray = [];
 
-// const requestUrlTriviaApi = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 async function fetchQuestion() {
-  console.log(selection);
-  console.log(difficulty);
   let response = await fetch(
     `https://opentdb.com/api.php?amount=10&category=${selection}&difficulty=${difficulty.toLowerCase()}&type=multiple`
   );
   let data = await response.json();
-  console.log(data);
+  // console.log(data);
   questionsArray = data.results;
+  console.log(questionsArray);
 }
-// fetchQuestion();
+
 let getCategory = document.querySelectorAll(".category-button");
 getCategory.forEach((item) => {
   item.addEventListener("click", storeCategory);
