@@ -9,6 +9,9 @@ Score Blue: #142AF1
 /* #correct-answer {
   background: red;
 } */
+.ok {
+  background-color: green;
+}
 :root {
   --app-yellow: #ffc128;
   --app-pink: #ff006c;

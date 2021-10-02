@@ -30,8 +30,8 @@ let data = {
   categoryStorage: "",
   difficultyStorage: "",
 };
-let selection = "17";
-let difficulty = "easy";
+let selection = "";
+let difficulty = "";
 
 async function fetchQuestion() {
   let response = await fetch(
