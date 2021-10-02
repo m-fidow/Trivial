@@ -49,7 +49,12 @@ let questionCounter = 0;
 const maximumQuestions = 10;
 
 let fetchButton = document.querySelector(".fetch-button");
-
+let displayFirstQuestion = document.querySelector(
+  ".displayFirstQuestion-button"
+);
+displayFirstQuestion.addEventListener("click", () => {
+  alert("hello");
+});
 fetchButton.addEventListener("click", goToScreen4);
 
 function goToScreen4() {
